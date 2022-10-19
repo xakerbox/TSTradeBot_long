@@ -1,0 +1,32 @@
+{
+  "name": "cryptobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./public/index",
+    "calc": "node ./public/utils/calculator",
+    "profit": "node ./public/binance/test",
+    "telega": "node ./public/telegram/telegram",
+    "1INCH_long": "node ./public/1INCH_long",
+    "SFP_long": "node ./public/SFP_long",
+    "DYDX_long": "node ./public/DYDX_long",
+    "XRP_long": "node ./public/XRP_long"
+
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.8.5",
+    "dotenv": "^16.0.3",
+    "node-binance-api": "^0.13.1",
+    "node-telegram-bot-api": "^0.59.0"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.57.5",
+    "prettier": "2.7.1"
+  }
+}
