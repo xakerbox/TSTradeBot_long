@@ -110,10 +110,13 @@ const run = async () => {
       case 5:
         if (tierArray[1] === 0) {
           try {
-            const [{ orderId: zeroSellOrderId }] = await binance.getSellOrder(
-              coin
-            );
-            await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            const sellOrdersResponse = await binance.getSellOrder(coin);
+
+            if (sellOrdersResponse) {
+              const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+              await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            }
+
             const [{ positionAmt, entryPrice }] =
               await binance.getCoinInPositionLong(coin);
             const limitPrice = roundValue(
@@ -139,10 +142,12 @@ const run = async () => {
       case 4:
         if (tierArray[2] === 0) {
           try {
-            const [{ orderId: zeroSellOrderId }] = await binance.getSellOrder(
-              coin
-            );
-            await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            const sellOrdersResponse = await binance.getSellOrder(coin);
+
+            if (sellOrdersResponse) {
+              const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+              await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            }
             const [{ positionAmt, entryPrice }] =
               await binance.getCoinInPositionLong(coin);
             const limitPrice = roundValue(
@@ -168,10 +173,12 @@ const run = async () => {
       case 3:
         if (tierArray[3] === 0) {
           try {
-            const [{ orderId: zeroSellOrderId }] = await binance.getSellOrder(
-              coin
-            );
-            await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            const sellOrdersResponse = await binance.getSellOrder(coin);
+
+            if (sellOrdersResponse) {
+              const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+              await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            }
             const [{ positionAmt, entryPrice }] =
               await binance.getCoinInPositionLong(coin);
             const limitPrice = roundValue(
@@ -197,10 +204,12 @@ const run = async () => {
       case 2:
         if (tierArray[4] === 0) {
           try {
-            const [{ orderId: zeroSellOrderId }] = await binance.getSellOrder(
-              coin
-            );
-            await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            const sellOrdersResponse = await binance.getSellOrder(coin);
+
+            if (sellOrdersResponse) {
+              const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+              await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            }
             const [{ positionAmt, entryPrice }] =
               await binance.getCoinInPositionLong(coin);
             const limitPrice = roundValue(
@@ -226,10 +235,12 @@ const run = async () => {
       case 1:
         if (tierArray[5] === 0) {
           try {
-            const [{ orderId: zeroSellOrderId }] = await binance.getSellOrder(
-              coin
-            );
-            await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            const sellOrdersResponse = await binance.getSellOrder(coin);
+
+            if (sellOrdersResponse) {
+              const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+              await binance.cancelLimitOrderById(coin, zeroSellOrderId);
+            }
             const [{ positionAmt, entryPrice }] =
               await binance.getCoinInPositionLong(coin);
             const limitPrice = roundValue(
