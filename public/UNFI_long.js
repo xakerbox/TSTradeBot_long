@@ -91,8 +91,11 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
             case 5:
                 if (tierArray[1] === 0) {
                     try {
-                        const [{ orderId: zeroSellOrderId }] = yield binance.getSellOrder(coin);
-                        yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        const sellOrdersResponse = yield binance.getSellOrder(coin);
+                        if (sellOrdersResponse) {
+                            const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+                            yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        }
                         const [{ positionAmt, entryPrice }] = yield binance.getCoinInPositionLong(coin);
                         const limitPrice = rounder_1.roundValue(+entryPrice * profitPercent[1], tickerSize);
                         yield binance.putLimitOrder({
@@ -114,8 +117,11 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
             case 4:
                 if (tierArray[2] === 0) {
                     try {
-                        const [{ orderId: zeroSellOrderId }] = yield binance.getSellOrder(coin);
-                        yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        const sellOrdersResponse = yield binance.getSellOrder(coin);
+                        if (sellOrdersResponse) {
+                            const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+                            yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        }
                         const [{ positionAmt, entryPrice }] = yield binance.getCoinInPositionLong(coin);
                         const limitPrice = rounder_1.roundValue(+entryPrice * profitPercent[2], tickerSize);
                         yield binance.putLimitOrder({
@@ -137,8 +143,11 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
             case 3:
                 if (tierArray[3] === 0) {
                     try {
-                        const [{ orderId: zeroSellOrderId }] = yield binance.getSellOrder(coin);
-                        yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        const sellOrdersResponse = yield binance.getSellOrder(coin);
+                        if (sellOrdersResponse) {
+                            const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+                            yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        }
                         const [{ positionAmt, entryPrice }] = yield binance.getCoinInPositionLong(coin);
                         const limitPrice = rounder_1.roundValue(+entryPrice * profitPercent[3], tickerSize);
                         yield binance.putLimitOrder({
@@ -160,8 +169,11 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
             case 2:
                 if (tierArray[4] === 0) {
                     try {
-                        const [{ orderId: zeroSellOrderId }] = yield binance.getSellOrder(coin);
-                        yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        const sellOrdersResponse = yield binance.getSellOrder(coin);
+                        if (sellOrdersResponse) {
+                            const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+                            yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        }
                         const [{ positionAmt, entryPrice }] = yield binance.getCoinInPositionLong(coin);
                         const limitPrice = rounder_1.roundValue(+entryPrice * profitPercent[4], tickerSize);
                         yield binance.putLimitOrder({
@@ -183,8 +195,11 @@ const run = () => __awaiter(void 0, void 0, void 0, function* () {
             case 1:
                 if (tierArray[5] === 0) {
                     try {
-                        const [{ orderId: zeroSellOrderId }] = yield binance.getSellOrder(coin);
-                        yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        const sellOrdersResponse = yield binance.getSellOrder(coin);
+                        if (sellOrdersResponse) {
+                            const [{ orderId: zeroSellOrderId }] = sellOrdersResponse;
+                            yield binance.cancelLimitOrderById(coin, zeroSellOrderId);
+                        }
                         const [{ positionAmt, entryPrice }] = yield binance.getCoinInPositionLong(coin);
                         const limitPrice = rounder_1.roundValue(+entryPrice * profitPercent[5], tickerSize);
                         yield binance.putLimitOrder({
