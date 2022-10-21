@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Calculator = void 0;
 const rounder_1 = require("./rounder");
 const configReader_1 = require("../utils/configReader");
 class Calculator {

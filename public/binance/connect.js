@@ -12,7 +12,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BinanceGlobal = void 0;
 const node_binance_api_1 = __importDefault(require("node-binance-api"));
 const balance_1 = require("../interfaces/binance/balance");
 const rounder_1 = require("../utils/rounder");

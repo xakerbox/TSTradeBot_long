@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateMiddleOrders = void 0;
 const rounder_1 = require("../utils/rounder");
-const generateMiddleOrders = (prices, qty, coin, tickerSize, orderType) => {
+exports.generateMiddleOrders = (prices, qty, coin, tickerSize, orderType) => {
     const arrayOfOrders = [];
     for (let i = 1; i < prices.length; i++) {
         arrayOfOrders.push({
@@ -15,4 +14,3 @@ const generateMiddleOrders = (prices, qty, coin, tickerSize, orderType) => {
     }
     return arrayOfOrders;
 };
-exports.generateMiddleOrders = generateMiddleOrders;

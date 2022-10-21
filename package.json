@@ -12,8 +12,9 @@
     "1INCH_long": "node ./public/1INCH_long",
     "SFP_long": "node ./public/SFP_long",
     "DYDX_long": "node ./public/DYDX_long",
-    "XRP_long": "node ./public/XRP_long"
-
+    "XRP_long": "node ./public/XRP_long",
+    "ADA_long": "node ./public/ADA_long",
+    "UNFI_long": "node ./public/UNFI_long"
 
   },
   "keywords": [],

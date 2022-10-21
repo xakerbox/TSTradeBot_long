@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getConfig = void 0;
 const fs_1 = require("fs");
-const getConfig = (coin) => {
+exports.getConfig = (coin) => {
     try {
         // Server side:
         const coinConfig = fs_1.readFileSync(`./public/configs/${coin}.json`, "utf-8");
@@ -13,4 +12,3 @@ const getConfig = (coin) => {
         throw `\n====> Где конфиг для ${coin}? А он правильный?\n`;
     }
 };
-exports.getConfig = getConfig;
