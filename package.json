@@ -14,7 +14,9 @@
     "DYDX_long": "node ./public/DYDX_long",
     "XRP_long": "node ./public/XRP_long",
     "ADA_long": "node ./public/ADA_long",
-    "UNFI_long": "node ./public/UNFI_long"
+    "UNFI_long": "node ./public/UNFI_long",
+    "COTI_long": "node ./public/COTI_long",
+    "STORJ_long": "node ./public/STORJ_long"
 
   },
   "keywords": [],
